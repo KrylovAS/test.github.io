@@ -1,6 +1,6 @@
-body { 
-  background-color: #ffffff;
+body {   
   font-family: "Montserrat", "Tahoma", sans-serif;  
+  color: #2b2b2b;
 }
 
 *,
@@ -13,28 +13,28 @@ a {
   color:inherit;
   text-decoration:none;
 }
-
-.feedback {
+ .data-section {
   display: flex;
+  justify-content: space-around;
+  position: relative;
+  padding: 115px 57px 112px 41px; 
   width: 800px;
-  margin: 150px auto 0; 
+  margin: 50px auto;
   text-shadow: #8d8d8d 0 0 1px; 
   color: #2b2b2b;
-  background-color: #f4f4f4;  
+  background-color: #f4f4f4;   
+ }
+
+.contacts {  
+  width: 270px;  
 }
 
-.contacts {
-  width: 310px;
-  margin-top: 115px;
-  margin-bottom: 115px;
-  padding-left: 83px;   
-}
 .contacts::before{
   content: url(../img/nike.svg);     
 }
 
-.contacts__header {  
-  margin-top: 42px;
+.contacts__header { 
+  margin-top: 41px;
   margin-bottom: 0;  
   line-height: 2.4rem; 
   font-size: 1.75rem;
@@ -46,8 +46,8 @@ a {
 }
 
 .contacts__header-desc {
-  margin-top: 5px;
-  margin-bottom: 22px;  
+  margin-top: 7px;
+  padding-right: 40px;
 }
 
 .desc-font {
@@ -56,115 +56,115 @@ a {
 }
 
 .contacts__phone {
-  margin-top: 0;
-  margin-right: 55px;
-  margin-bottom: 8px;
+  display: inline-block;
+  margin-top: 11px;
+  margin-bottom: 7px;
   font-size: 1.25rem;
   border-bottom: 2px solid #F5A623;
 }
 
-.contacts__social {
-  display: inline-block;
-  margin-top: 20px;
-  padding-left: 6px;   
+.contacts__phone:last-of-type {
+ margin-top: 0;
 }
 
-.contacts__social path {
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70px;
+  margin-top: 25px;  
+}
+
+.social-decoration path {
   fill: #2b2b2b;
 }
-.contacts__social path:hover {
+.social-decoration path:hover {
   fill: #dd3c39;
 }
 
-.contacts__social:first-of-type {
-  padding-top: 4px;
-  padding-left: 0;
-}
-
-.login-wrap { 
-  width: 490px; 
-  margin-top: 15px;  
-  background: url('../img/bg-form.svg') no-repeat;    
-}
-
-.login__wrap-form {
-  width: 272px;
-  margin-top: 112px;
-  margin-left: 122px;
-  padding-top: 8px;
-  padding-bottom: 25px;  
-  padding-left: 24px;  
-  font-size: 0.7rem;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);   
-}
-
-.login__head {
-  margin-bottom: 12px;
-  font-size: 1.5rem;
+.authorization {
+  z-index: 77;
+  width: 270px;
+  margin-top: 8px;
+  margin-bottom: 18px;
   font-weight: 400;
+  font-size: 0.7rem;
+  background-color: #fff; 
 }
 
-.login__desc {
-  padding-right: 30px; 
+.authorization__content{
+  padding: 13px 25px 20px;  
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.authorization__head { 
+  margin-bottom: 12px;
+  font-size: 1.5rem; 
 }
 
 .form__input-name,
-.form__input-password {
+.form__input-password {  
   width: 221px;
   margin-top: 11px;
   padding: 13px 0 13px 10px;  
   background-color: rgba(224, 224, 224, 0.35);
   border: none;  
-} 
-
-.login__forgot {
-  display: inline-block;
-  margin-top: 11px;
-  margin-left: 120px;  
-  text-shadow: #dd3c39 0 0 1px;  
-  color: #dd3c39;
 }
 
-.login__forgot:after {
+.authorization__forgot {
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 115px; 
+  text-shadow: #dd3c39 0 0 1px;  
+  color: #dd3c39;
+  cursor: pointer;
+}
+
+.authorization__forgot:after {
   display: block;
   content: "";
   width: 0%;
   height: 1px;
-  background-color:#dd3c39;
-  
+  background-color:#dd3c39;  
+}
+.authorization__forgot:focus {
+  border: 1px solid #f80904;
+}
+.forgot-hidden {
+  display: none;
 }
 
-.login__forgot:hover:after {  
+.authorization__forgot:hover:after {  
   width: 100%;  
 }
 
-.fargot-back {
-  margin-left: 55px;  
-}
-
-.login__btn {
-  margin-top: 21px;
-  padding: 13px 94px;
+.authorization__btn {
+  display: block;
+  width: 221px;
+  height: 40px;
+  margin-top: 16px;  
   border-radius: 5px;
   border: none;
   color: #ffffff;
   background-color: #dd3c39; 
+  cursor: pointer;
 }
 
-.login__btn:hover {
+.authorization__btn:focus{
+  background-color: #f12824
+}
+
+.authorization__btn:hover {
   background-color: #f3504d
 }
 
-
-
-
-
-
-
-
-
+.data-section:before {
+  display: block;
+  content: url('../img/bg-form.svg');
+  position: absolute;
+  top: 15px;
+  right: 0;   
+}
 
 
 
