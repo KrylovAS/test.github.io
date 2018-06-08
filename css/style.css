@@ -25,6 +25,14 @@ a {
   background-color: #f4f4f4;   
  }
 
+ .data-section:before {
+  display: block;
+  content: url('../img/bg-form.svg');
+  position: absolute;
+  top: 15px;
+  right: 0;   
+}
+
 .contacts {  
   width: 270px;  
 }
@@ -145,26 +153,60 @@ a {
   margin-top: 16px;  
   border-radius: 5px;
   border: none;
+  outline: none;
   color: #ffffff;
   background-color: #dd3c39; 
   cursor: pointer;
 }
 
-.authorization__btn:focus{
-  background-color: #f12824
-}
-
 .authorization__btn:hover {
   background-color: #f3504d
 }
-
-.data-section:before {
-  display: block;
-  content: url('../img/bg-form.svg');
-  position: absolute;
-  top: 15px;
-  right: 0;   
+.authorization__btn:focus {
+  background-color: #fd0202
 }
 
 
 
+
+
+@media only screen and (max-width : 480px) {
+  .data-section {
+    width: 100vw;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+  }
+  .data-section:before {
+    display: none;
+  }
+
+  .contacts,
+  .authorization {
+    width: 100vw;
+    padding: 0 50px;
+  }
+
+  .contacts {
+    padding-top: 15px;
+  }
+  .contacts__header {
+    margin-top: 10px;
+  }
+
+  .contacts__header-desc {    
+    padding: 0 25px;
+    
+  }
+
+  .authorization__content {
+    width: 272px;
+    box-shadow: none;
+  }
+
+  .social {
+    margin: 10px auto;
+  }
+}
