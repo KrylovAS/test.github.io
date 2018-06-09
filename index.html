@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body>
+  <body>    
+    <input  class="radio-hidden" name="radio_btn" id="radio_btn-back" type="radio"> 
+    <input  class="radio-hidden" name="radio_btn" id="radio_btn" type="radio">     
     <section class="data-section ">
       <section class="contacts">                     
           <h2 class="contacts__header"><span class="contacts__header-decoration">Welcome</span>to The Nike Analytics</h2>
@@ -34,20 +36,28 @@
             </a> 
         </div>           
       </section>
-      <section class="authorization">
-          <div class="authorization__content">
+      <section class="authorization flip">
+          <div class="authorization__content flip-face front authorization-hidden ">
               <h3 class="authorization__head">Login</h3>
               <p class="authorization__desc desc-font ">This is a secure system and you will need to provide your login details to access the site</p>
               <form class="authorization__form" action="#">
                   <input class="form__input-name"  name="email" type="text" placeholder="User name">
                   <input class="form__input-password"  name="password" type="password" placeholder="Password">
               </form>
-              <input  class="forgot-hidden" name="radio_btn" id="radio_btn" type="radio">
-              <label class="authorization__forgot desc-font"  id="radio_btn" name="radio_btn">Forgot password?  </label> 
-              <button class="authorization__btn" type="submit">Log in</button> 
+              <label class="authorization__forgot desc-font"  for="radio_btn" name="radio_btn">Forgot password?</label>            
+              <a class="authorization__btn" href="#">Log in</a> 
           </div>
-      </section>
-         
-    </section>
+          <div class="authorization__content  flip-face back authorization-hidden">
+              <h3 class="authorization__head">Reset password</h3>
+              <p class="authorization__desc desc-font ">This is a secure system and you will need to provide your login details to access the site</p>
+              <form class="authorization__form" action="#">
+                  <input class="form__input-name"  name="email" type="text" placeholder="User name">
+                  <input class="form__input-password"  name="password" type="password" placeholder="Password">
+              </form> 
+              <label class="authorization__forgot authorization__forgot-back desc-font"  for="radio_btn-back" name="radio_btn">Back to log-in page</label>                                      
+              <a class="authorization__btn" href="#">Reset password</a>                
+          </div>
+      </section>            
+    </section>    
   </body>
 </html>
