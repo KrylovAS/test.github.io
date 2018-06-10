@@ -13,6 +13,7 @@ a {
   color:inherit;
   text-decoration:none;
 }
+
  .data-section {
   position: relative;
   display: flex;
@@ -84,7 +85,7 @@ a {
 .social-decoration path {
   fill: #2b2b2b;
 }
-.social-decoration-1 path:hover {
+.social-decoration path:hover {
   fill: #dd3c39;
 }
 
