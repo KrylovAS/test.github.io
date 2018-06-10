@@ -1,6 +1,6 @@
 body {   
   font-family: "Montserrat", "Tahoma", sans-serif;  
-  color: #2b2b2b;
+  color: #2b2b2b;  
 }
 
 *,
@@ -19,7 +19,8 @@ a {
   justify-content: space-around;  
   margin: 50px auto;
   padding: 115px 55px 110px 40px; 
-  width: 800px;   
+  width: 800px; 
+  font-weight: 400;  
   background-color: #f4f4f4;   
  }
 
@@ -43,8 +44,7 @@ a {
   margin-top: 40px;
   margin-bottom: 0;  
   line-height: 2.4rem; 
-  font-size: 1.75rem;
-  font-weight: 400;      
+  font-size: 1.75rem;       
 }
 
 .contacts__header-decoration {
@@ -56,7 +56,7 @@ a {
   padding-right: 40px;
 }
 
-.desc-font {
+.desc-size {
   font-size: 0.7rem;
   line-height: 1.15rem;
 }
@@ -84,7 +84,7 @@ a {
 .social-decoration path {
   fill: #2b2b2b;
 }
-.social-decoration path:hover {
+.social-decoration-1 path:hover {
   fill: #dd3c39;
 }
 
@@ -93,15 +93,15 @@ a {
   z-index: 77;
   width: 270px;
   margin-top: 10px;
-  margin-bottom: 20px;
-  font-weight: 400;
+  margin-bottom: 10px;  
   font-size: 0.7rem;
   background-color: #fff; 
+  border-radius: 5px;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);  
 }
 
 .authorization__content{
-  padding: 15px 25px 20px;   
+  padding: 10px 25px 0;   
 }
 
 .authorization__head { 
@@ -184,10 +184,14 @@ a {
   top: 0;
   bottom: 0;
 }
-.flip-face.back {  
+.back {  
   transform: rotateY(180deg);  
   backface-visibility: hidden; 
   background-color: #fff;   
+}
+
+.authorization-hidden {
+  display: none;
 }
 
 #radio_btn:checked  + .data-section > .authorization   {  
@@ -216,14 +220,12 @@ a {
   100% {transform: scale(1) }  
 }
 
-@keyframes bouncing {
-  0%  {transform: scale(1) }
+@keyframes bouncing {  
   60% {transform: scale(0.4) }
   100% { transform: scale(1) }
 }
 
-@keyframes bouncing-back {
-  0%  {transform: scale(1) }
+@keyframes bouncing-back {  
   50% {transform: scale(0.4) }
   100% { transform: scale(1) }
 } 
@@ -232,8 +234,7 @@ a {
 
 @media only screen and (max-width : 480px) {
 
-  .data-section {
-    width: 100vw;
+  .data-section {    
     display: block;
     margin: 0;
     padding: 0;
@@ -243,18 +244,21 @@ a {
   .data-section:before {
     display: none;
   }
-
+  .data-section,
   .contacts,
-  .authorization {
-    width: 100vw;    
-    padding: 0 50px;
-  }
-  .contacts {
-    overflow: hidden;
+  .authorization {    
+    width: 100vmax;       
+  } 
+
+  .contacts, 
+  .authorization__content {
+    width: 272px;     
+    margin: 0 auto;
+    overflow: hidden; 
   }
 
   .contacts {
-    padding-top: 15px;
+    padding-top: 15px;           
   }
 
   .contacts__header {
@@ -263,10 +267,12 @@ a {
 
   .contacts__header-desc {    
     padding: 0 25px;    
-  }
+  } 
 
   .authorization__content {
+    position: static;
     width: 272px;
+    margin: 0 auto;
     box-shadow: none;
   }
 
@@ -276,9 +282,14 @@ a {
 
   .authorization__btn {
     margin-bottom: 35px;    
+  }  
+
+  .back {
+    display: none;
   }
 
-  #radio_btn:checked  + .data-section > .authorization {
+  #radio_btn:checked  + .data-section > .authorization,
+  #radio_btn-back:checked  ~ .data-section > .authorization  {
     animation: none;
   }
 }

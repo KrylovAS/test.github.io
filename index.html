@@ -15,9 +15,9 @@
     <section class="data-section ">
       <section class="contacts">                     
           <h2 class="contacts__header"><span class="contacts__header-decoration">Welcome</span>to The Nike Analytics</h2>
-          <p class="contacts__header-desc desc-font">To request an account, please contact the site administrators</p>        
-          <p class="contacts__phone">+245 04 166 0355</p> 
-          <p class="contacts__phone">+347 42 390 2456</p> 
+          <p class="contacts__header-desc desc-size">To request an account, please contact the site administrators</p>        
+          <a class="contacts__phone" href="tel:+245041660355">+245 04 166 0355</a> 
+          <a class="contacts__phone" href="tel:+347423902456">+347 42 390 2456</a> 
           <div class="social">      
             <a class="social-decoration" href="#">
                 <svg  width="17" height="17" viewBox="0 0 17 32"  xmlns="http://www.w3.org/2000/svg">
@@ -35,29 +35,30 @@
                 </svg>
             </a> 
         </div>           
-      </section>
+      </section>      
       <section class="authorization flip">
-          <div class="authorization__content flip-face front authorization-hidden ">
+          <div class="authorization__content flip-face">
               <h3 class="authorization__head">Login</h3>
-              <p class="authorization__desc desc-font ">This is a secure system and you will need to provide your login details to access the site</p>
-              <form class="authorization__form" action="#">
+              <p class="authorization__desc desc-size ">This is a secure system and you will need to provide your login details to access the site</p>
+              <form action="#">
                   <input class="form__input-name"  name="email" type="text" placeholder="User name">
                   <input class="form__input-password"  name="password" type="password" placeholder="Password">
               </form>
-              <label class="authorization__forgot desc-font"  for="radio_btn" name="radio_btn">Forgot password?</label>            
+              <label class="authorization__forgot desc-size"  for="radio_btn" name="radio_btn">Forgot password?</label>            
               <a class="authorization__btn" href="#">Log in</a> 
           </div>
-          <div class="authorization__content  flip-face back authorization-hidden">
+          <div class="authorization__content  flip-face back">
               <h3 class="authorization__head">Reset password</h3>
-              <p class="authorization__desc desc-font ">This is a secure system and you will need to provide your login details to access the site</p>
-              <form class="authorization__form" action="#">
+              <p class="authorization__desc desc-size ">This is a secure system and you will need to provide your login details to access the site</p>
+              <form action="#">
                   <input class="form__input-name"  name="email" type="text" placeholder="User name">
                   <input class="form__input-password"  name="password" type="password" placeholder="Password">
               </form> 
-              <label class="authorization__forgot authorization__forgot-back desc-font"  for="radio_btn-back" name="radio_btn">Back to log-in page</label>                                      
+              <label class="authorization__forgot authorization__forgot-back desc-size"  for="radio_btn-back" name="radio_btn">Back to log-in page</label>                                      
               <a class="authorization__btn" href="#">Reset password</a>                
           </div>
       </section>            
-    </section>    
+    </section>
+    <script src="./js/script.js"></script>    
   </body>
 </html>
